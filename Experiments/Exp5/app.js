@@ -8,5 +8,5 @@ function addEmployee() {
 
     };
     employees.push(emp);
-    alert("Employee added successfully!");
+    alert("Employee added successfully!!");
 }
