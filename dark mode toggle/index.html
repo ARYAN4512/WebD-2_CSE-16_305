@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Mode Toggle</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            padding: 10px 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Dark Mode Toggle</h2>
+
+    <button onclick="toggleMode()">Toggle Dark Mode</button>
+
+    <script>
+
+        function toggleMode() {
+            document.body.classList.toggle("dark");
+        }
+
+    </script>
+
+</body>
+</html>
