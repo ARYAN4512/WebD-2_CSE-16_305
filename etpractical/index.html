@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Odd or Even Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            margin: 10px 0;
+            width: 80%;
+        }
+        button {
+            padding: 8px 12px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Odd or Even Checker</h2>
+        <input type="number" id="userNumber" placeholder="Enter a number">
+        <br>
+        <button onclick="checkOddEven()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkOddEven() {
+            let num = document.getElementById("userNumber").value;
+            let result = document.getElementById("result");
+
+            if (num === "") {
+                result.textContent = "Please enter a number.";
+                return;
+            }
+
+            num = parseInt(num);
+
+            if (num % 2 === 0) {
+                result.textContent = num + " is Even.";
+            } else {
+                result.textContent = num + " is Odd.";
+            }
+        }
+    </script>
+</body>
+</html>
